@@ -1,0 +1,205 @@
+/*
+*
+*	@author Carolina Vasconcelos
+*	@version 0.1;
+*
+*/
+
+/* =========================== Layout =========================== */
+
+html, body, .capa {
+	height: 100%;
+}
+
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	background: url('imagens/capa.png'),
+				url('imagens/ruido.png'),
+				linear-gradient(50deg, #FF4169, #7C26F8);
+	background-attachment: fixed; /* irá deixar o plano de fundo fixo */
+	overflow-x: hidden; /* esconder a barra horizontal, caso a imagem ultrapasse a tela */
+}
+
+/* -- Barra de Navegação -- */
+.img-logo {
+	height: 40px;
+	width: 132px;
+	display: block; /* elementos do tipo span, onde está o logo, são do tipo inline, por isso vamos coloca-lo como block */
+	background: url('imagens/spotify.svg') no-repeat;
+	background-size: contain; /* a imagem irá encobrir todo o conteudo, ou seja, 40x132 */
+	color: transparent; /* é aconselhavel deixar o nome 'Spotify' escrito caso a imagem não carregue, nesse caso ele ficará transparente */
+}
+
+nav.navbar-transparente {
+	padding: 15px 0px;
+	background: rgba(0, 0, 0, 0.6);
+	border: none;
+}
+
+.navbar-brand {
+	padding: 5px 15px;
+}
+
+.divisor {
+	width: 1px;
+	height: 16px;
+	background: #FFF;
+	margin: 16px 10px;
+}
+
+.navbar-inverse .navbar-nav>li>a, #rodape .nav a{
+	color: white;
+	font-weight: bold;
+	letter-spacing: 0.03em;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover, #rodape .nav a:hover {
+	color: #9bf0e1;
+	background: none;
+}
+
+/* -- Imagem de capa -- */
+.capa {
+	/* macete para centralizar a capa */
+	display: table;
+	width: 100%;
+}
+
+.texto-capa {
+	text-align: center;
+	color: white;
+	/* macete para centralizer a capa */
+	display: table-cell;
+	vertical-align: middle;
+}
+
+/* -- Botões -- */
+.btn-custom {
+	color: white;
+	border-radius: 500px;
+	padding: 10px 35px;
+	/* compatibilidade com os navegadores */
+	-webkit-border-radius: 500px;
+	-moz-border-radius: 500px;
+	text-transform: uppercase; /* deixará o texto em maiúsculo */
+	transition: background 0.4s, color 0.4s;
+	font-weight: 700;
+}
+
+.btn-roxo {
+	background: #7C25F8;
+}
+.btn-roxo:hover {
+	background-color: #6207E3;
+	color: white;
+}
+
+.btn-branco {
+	border: 2px solid white;
+	background: none;
+}
+.btn-branco:hover {
+	background-color: #FFF;
+	color: #000;
+}
+
+/* -- Seção - Serviços -- */
+#servicos {
+	background: white;
+	padding: 20px 0px;
+}
+
+.albuns {
+	padding: 10px 0px;
+}
+
+/* -- Seção - Recursos -- */
+#recursos {
+	color: white;
+	padding: 20px 0px;
+}
+
+.rotacionar {
+	transform: rotate(30deg);
+	/* compatibilidade com navegadores */
+	-ms-transform: rotate(30deg);
+	-webkit-transform: rotate(30deg);
+	margin-left: 60px;
+	padding-left: 30px;
+}
+
+/* -- Rodapé -- */
+#rodape {
+	background: black;
+	padding: 50px 0px 20px 0px;
+	position: relative;
+}
+
+.item-rede-social {
+	padding: 0px 10px;
+	float: right;
+}
+
+/* =========================== Tipografia =========================== */
+
+h1 {
+	font-weight: 900;
+	letter-spacing: -0.05em; /* espaçamento entre as letras */
+	margin-bottom: 50px;
+}
+
+/* Media Queries */
+@media screen and (max-height: 767px){
+	h1 {
+		font-size: 50px;
+	}
+
+	.btn-custom {
+		margin: 10px 30px;
+	}
+}
+
+@media screen and (min-height: 768px){
+	h1 {
+		font-size: 80px;
+	}
+}
+
+@media screen and (min-width: 992px){
+	h1 {
+		font-size: 90px;
+	}
+}
+
+@media screen and (min-width: 1200px){
+	h1 {
+		font-size: 100px;
+	}
+}
+
+h2 {
+	font-size: 55px;
+	font-weight: 700;
+	letter-spacing: -0.04em;
+}
+
+h3 {
+	font-size: 40px;
+	font-weight: 700;
+	letter-spacing: -0.04em;
+	padding-bottom: 3px;
+}
+
+#servicos h2, #servicos h3 {
+	color: #7C25F8;
+}
+
+#recursos h3 {
+	color: #9bf0e1;
+}
+
+#rodape h4 {
+	color: #919496;
+	font-size: 14px;
+	text-transform: uppercase;
+}
